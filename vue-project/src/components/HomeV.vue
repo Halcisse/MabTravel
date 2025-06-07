@@ -65,22 +65,11 @@ const images = ref([
   width: 80%;
 }
 
-h1 {
-  font-size: 5.5rem;
-  color: #004aad;
-  margin-bottom: 70px;
-  width: 40%;
-
+h1{
+    width: 40%;
 }
 
-p {
-  font-size: 1.8rem;
-  line-height: 1.7;
-  color: #555;
-  margin-bottom: 2.6rem;
-  max-width: 900px;
-  text-align: center;
-}
+
 
 .carousel {
   max-width: 1000px;

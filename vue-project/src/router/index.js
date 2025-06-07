@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeV from "../components/HomeV.vue"
 import ThePalace from "../components/ThePalace.vue"
 import VillaBonsai from "../components/VillaBonsai.vue"
+import Contact from "../components/Contact.vue"
 
 
 const router = createRouter({
@@ -21,6 +22,11 @@ const router = createRouter({
       path: '/villa-bonsai',
       name: 'villabonsai',
       component: VillaBonsai,
+    },
+              {
+      path: '/contact',
+      name: 'contact',
+      component:Contact,
     },
     // {
     //   path: '/about',
