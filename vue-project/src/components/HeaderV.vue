@@ -11,9 +11,9 @@
 
       <nav :class="['nav-links', { open: isOpen }]">
         <router-link to="/" @click="closeMenu">Accueil</router-link>
-        <router-link to="/the-palace" @click="closeMenu">The Palace</router-link>
-        <router-link to="/villa-bonsai" @click="closeMenu">Villa Bonsai</router-link>
-        <router-link to="/contact" @click="closeMenu">Contact</router-link>
+        <router-link to="/hebergements" @click="closeMenu">Les hébergements</router-link>
+        <router-link to="/services" @click="closeMenu">Les services</router-link>
+        <router-link to="/contact" @click="closeMenu">Contact & Tarifs</router-link>
       </nav>
     </div>
   </header>
@@ -48,20 +48,20 @@ const closeMenu = () => { isOpen.value = false }
 }
 
 .logo {
-width: 480px;
-height: 200px;
+  width: 290px;
+  height: 110px;
 }
 
 /* === NAVIGATION === */
 .nav-links {
   display: flex;
-  gap: 1.5rem;
+  gap: 2.9rem;
 }
 
 .nav-links a {
-  font-size: 38px;
+  font-size: 30px;
   text-decoration: none;
-  color: #333;
+  color: #004aad;
   font-weight: 500;
   transition: color 0.3s ease;
 }
@@ -73,7 +73,7 @@ height: 200px;
 /* === MENU TOGGLE MOBILE === */
 .menu-toggle {
   display: none;
-  font-size: 32px;
+  font-size: 26px;
   background: none;
   border: none;
   cursor: pointer;

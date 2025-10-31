@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeV from "../components/HomeV.vue"
-import ThePalace from "../components/ThePalace.vue"
-import VillaBonsai from "../components/VillaBonsai.vue"
+import Hebergements from "../components/Hebergements.vue"
+import Services from "../components/Services.vue"
 import Contact from "../components/Contact.vue"
 
 
@@ -14,14 +14,14 @@ const router = createRouter({
       component: HomeV,
     },
         {
-      path: '/the-palace',
-      name: 'thepalace',
-      component: ThePalace,
+      path: '/hebergements',
+      name: 'hebergements',
+      component: Hebergements,
     },
             {
-      path: '/villa-bonsai',
-      name: 'villabonsai',
-      component: VillaBonsai,
+      path: '/services',
+      name: 'services',
+      component: Services,
     },
               {
       path: '/contact',
