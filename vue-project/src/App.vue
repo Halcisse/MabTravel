@@ -14,6 +14,7 @@ import Footer from "./components/FooterV.vue"
 
 <style>
 
+
 h1 {
   font-size: 5.5rem;
   color: #004aad;

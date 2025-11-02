@@ -87,6 +87,7 @@ const images = ref([
   justify-content: center;
   padding: 100px 20px 40px;
   background-color: #f8f8f8;
+ 
 
 }
 
@@ -108,6 +109,7 @@ const images = ref([
 
 h1 {
   color: #FF914D;
+  text-align: right;
 
 }
 
