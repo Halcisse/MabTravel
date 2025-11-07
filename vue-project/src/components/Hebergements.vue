@@ -26,9 +26,10 @@
     </aside>
   </section> -->
 
-  <div class="hebergContent">
+  <div class="hebergContent" id="Hebergements">
     <section class="container">
       <h1>Des hébergements de luxe et sécurisés</h1>
+      <font-awesome-icon icon="fa-solid fa-ellipsis" class="doth1" />
       <p class="containerP">Nous vous proposons une large gamme de logements à louer, notre priorité étant la sécurité.
         <br><br>
         Selon vos besoins, nous pouvons vous proposer des AirBnb certifié de qualité, sécurisé et tout équipé, avec ou
@@ -37,14 +38,14 @@
         Voici quelques photos de nos principaux partenaires, pour vous inspirer. <br>
         Vous pourrez ensuite remplir le formulaire afin de connaitre vos besoins précis, nous pourrons ainsi vous
         proposer le logement idéal.
-        <br><br>
-        <RouterLink to="/contact" class="button">Prenez contact avec nous tout de suite !</RouterLink>
+
       </p>
 
       <div class="gallery">
 
         <div class="palaceCard card">
           <h2>The Palace</h2>
+          <font-awesome-icon icon="fa-solid fa-ellipsis" class="dot" />
           <p class="cardP">
             Bienvenue à <strong>Villa Bonsai</strong>, un havre de paix et de sérénité niché au cœur du Maroc.
             Cette villa allie design épuré et nature luxuriante, idéale pour les amateurs de calme et de bien-être.
@@ -59,6 +60,7 @@
         </div>
         <div class="bonsaiCard card">
           <h2>La Villa Bonsai</h2>
+          <font-awesome-icon icon="fa-solid fa-ellipsis" class="dot" />
           <p>
             Bienvenue à <strong>Villa Bonsai</strong>, un havre de paix et de sérénité niché au cœur du Maroc.
             Cette villa allie design épuré et nature luxuriante, idéale pour les amateurs de calme et de bien-être.
@@ -73,6 +75,7 @@
 
         <div class="TargaCard card">
           <h2>La Villa Targa</h2>
+          <font-awesome-icon icon="fa-solid fa-ellipsis" class="dot" />
           <p>
             Bienvenue à <strong>Villa Bonsai</strong>, un havre de paix et de sérénité niché au cœur du Maroc.
             Cette villa allie design épuré et nature luxuriante, idéale pour les amateurs de calme et de bien-être.
@@ -129,7 +132,7 @@ const imagesT = ref([
   align-items: center;
   justify-content: center;
   padding: 100px 20px 40px;
-  background-color: #f8f8f8;
+  /* background-color: #f8f8f8; */
 }
 
 .container {
@@ -137,13 +140,19 @@ const imagesT = ref([
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #FF914D;
-  width: 55%;
-  margin-bottom: 40px;
+  background-color: #fff;
+  width: 100%;
+  margin: 40px;
+
 }
 
 h1 {
-  width: 70%;
+  width: 55%;
+
+}
+
+h2 {
+  color: #fff;
 }
 
 .carousel {
@@ -156,7 +165,7 @@ h1 {
   height: 400px;
   object-fit: cover;
   border-radius: 10px;
-  border: 1px solid #fff;
+  border: 1px solid #004aad;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -169,22 +178,24 @@ h1 {
   padding: 10px 0 30px 0;
   border-radius: 10px;
   margin-bottom: 50px;
+  border-bottom: 8px solid #fff;
+  background-color: #004aad;
 
 }
 
-.card p {
+
+.containerP {
   color: #004aad;
 }
 
-.containerP {
-  color: #fff;
-}
+
 
 .button {
   background-color: #004aad;
   color: white;
   border: none;
   padding: 14px 28px;
+  margin: 60px 0;
   font-size: 26px;
   border-radius: 6px;
   cursor: pointer;
@@ -194,5 +205,20 @@ h1 {
 
 .button:hover {
   background-color: #79ade4;
+}
+
+.doth1 {
+  color: #FF914D;
+  width: 50px;
+  height: 50px;
+
+}
+
+.dot {
+  color: #FF914D;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: right;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <section class="servicesContent">
+  <section class="servicesContent" id="Services">
     <div class="container">
       <h1>De nombreux services pour une expérience unique </h1>
       <p class="servicesP">Nous vous proposons une large gamme de logements à louer, notre priorité étant la sécurité.
@@ -15,6 +15,7 @@
           <!-- icon excursions-->
           <font-awesome-icon icon="fa-solid fa-mountain-sun" class="icon" />
           <h3>Les excursions</h3>
+          <font-awesome-icon icon="fa-solid fa-ellipsis" class="dot" />
           <p>Propose un planning pour <br> profiterpleinement de son séjour, activités, tourisme, etc..</p>
           <div class="imgCard">
 
@@ -28,6 +29,7 @@
           <!-- icon restaurants-->
           <font-awesome-icon icon="fa-solid fa-utensils" class="icon" />
           <h3>Les Restaurants & Marchés</h3>
+          <font-awesome-icon icon="fa-solid fa-ellipsis" class="dot" />
           <p>Propose un planning pour profiter <br> pleinement de son séjour, activités, tourisme, etc..</p>
           <div class="imgCard">
 
@@ -40,6 +42,7 @@
           <!-- icon bien-être-->
           <font-awesome-icon icon="fa-solid fa-hand-holding-heart" class="icon" />
           <h3>Les activités Bien-être</h3>
+          <font-awesome-icon icon="fa-solid fa-ellipsis" class="dot" />
           <p>Propose un planning pour profiter <br> pleinement de son séjour, activités, tourisme, etc..</p>
           <div class="imgCard">
 
@@ -69,7 +72,7 @@
   align-items: center;
   justify-content: center;
   padding: 100px 20px 40px;
-  background-color: #f8f8f8;
+  background-color: #fff;
 }
 
 .container {
@@ -79,8 +82,7 @@
   justify-content: center;
   background-color: #FF914D;
   border: 6px solid #FF914D;
-  /* background-color: #004aad; */
-  width: 55%;
+  width: 75%;
   margin-bottom: 40px;
 }
 
@@ -91,6 +93,7 @@ h1 {
 
 h3 {
   font-size: 44px;
+
 }
 
 p,
@@ -120,16 +123,22 @@ h3 {
   width: 100%;
   padding-top: 40px;
   margin-bottom: 50px;
-  border-top: 9px solid #004aad;
+  border: 9px double #FF914D;
   background-color: #fff;
 
 }
 
 .icon {
   color: #004aad;
-  width: 90px;
-  height: 90px;
+  width: 50px;
+  height: 50px;
 
+}
+
+.dot {
+  color: #FF914D;
+  width: 50px;
+  height: 50px;
 }
 
 .imgCard {

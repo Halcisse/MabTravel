@@ -13,21 +13,23 @@ import Footer from "./components/FooterV.vue"
 </template>
 
 <style>
-
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Momo+Signature&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 h1 {
+
   font-size: 5.5rem;
   color: #004aad;
   margin-bottom: 0;
-  width: 55%;
+  width: 60%;
   text-align: right;
 
 }
 
 h2 {
+  font-family: "Momo Signature", cursive;
   font-size: 2.9rem;
   color: #004aad;
-  width: 60%;
+  width: 80%;
   text-align: right;
 }
 

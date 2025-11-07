@@ -10,10 +10,10 @@
       </button>
 
       <nav :class="['nav-links', { open: isOpen }]">
-        <router-link to="/" @click="closeMenu">Accueil</router-link>
-        <router-link to="/hebergements" @click="closeMenu">Les hébergements</router-link>
-        <router-link to="/services" @click="closeMenu">Les services</router-link>
-        <router-link to="/contact" @click="closeMenu">Contact & Tarifs</router-link>
+        <router-link :to="{ hash: '#Accueil' }" @click="closeMenu">Accueil</router-link>
+        <router-link :to="{ hash: '#Hebergements' }" @click="closeMenu">Hébergements</router-link>
+        <router-link :to="{ hash: '#Services' }" @click="closeMenu">Services</router-link>
+        <router-link :to="{ hash: '#Contact' }" @click="closeMenu">Contact & Tarifs</router-link>
       </nav>
     </div>
   </header>

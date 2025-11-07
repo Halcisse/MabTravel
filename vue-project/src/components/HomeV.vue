@@ -1,9 +1,11 @@
 <template>
-  <div class="accueil">
+  <div class="accueil" id="Accueil">
 
     <section>
       <div class="container">
-        <h1>Bienvenue chez Les Clés de Maby</h1>
+        <h1>Bienvenue chez Les <font-awesome-icon icon="fa-solid fa-key" class="icon" /> Clés de Maby</h1>
+
+        <font-awesome-icon icon="fa-solid fa-ellipsis" class="dot" />
 
         <p>
           La conciergerie <strong>Les Clés de Maby</strong> vous ouvre les portes de l’excellence au Maroc. <br>
@@ -13,12 +15,8 @@
           s’assure que chaque moment dépasse vos attentes.
         </p>
 
+        <img src="../../public/images/photo2.jpeg" alt="photo d'une villa ">
 
-        <Carousel :items-to-show="1" :wrap-around="true" :autoplay="4000" class="carousel">
-          <Slide v-for="(img, index) in images" :key="index">
-            <img :src="img.src" :alt="img.alt" class="carousel-img" />
-          </Slide>
-        </Carousel>
 
       </div>
 
@@ -55,8 +53,12 @@
 
       </div>
 
-      <RouterLink to="/contact" class="button">Prenez contact avec nous tout de suite !</RouterLink>
+      <RouterLink to="/contact" class="button">CLIQUEZ ICI POUR OBTENIR UN DEVIS</RouterLink>
     </aside>
+
+    <Hebergements />
+    <Services />
+    <Contact />
 
   </div>
 
@@ -64,19 +66,9 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Slide } from 'vue3-carousel'
-
-const images = ref([
-  { src: './images/photo1.jpeg', alt: 'Villa 1' },
-  { src: './images/photo2.jpeg', alt: 'Villa 2' },
-  { src: './images/photo3.jpeg', alt: 'Villa 3' },
-  { src: './images/photo4.jpeg', alt: 'Villa 4' },
-  { src: './images/photo5.jpeg', alt: 'Villa 5' },
-])
-
-
+import Hebergements from './Hebergements.vue';
+import Services from './Services.vue';
+import Contact from './Contact.vue'
 </script>
 
 <style scoped>
@@ -85,9 +77,9 @@ const images = ref([
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 100px 20px 40px;
-  background-color: #f8f8f8;
- 
+  /* padding: 100px 20px 40px; */
+  background-color: rgb(158, 194, 240, 0.2);
+
 
 }
 
@@ -96,45 +88,64 @@ const images = ref([
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: 50px;
+  padding: 0 0 50px 0;
   margin-bottom: 70px;
-  background-color: #004aad;
+  /* border: 2px solid #FF914D; */
+}
 
+.container p {
+  text-align: left;
 }
 
 .content {
   display: flex;
-  width: 80%;
+  /* width: 80%; */
 }
 
 h1 {
-  color: #FF914D;
+  color: #004aad;
   text-align: right;
-
+  width: 55%;
 }
 
 h2 {
-  margin-bottom: 55px;
+
+  margin-bottom: 95px;
+  width: 40%;
 }
 
-.carousel {
-  max-width: 1000px;
-  margin: 0 auto 40px;
+h3 {
+ color: #004aad;
+  font-size: 30px;
 }
 
-.carousel-img {
+.dot {
+  color: #FF914D;
+  width: 50px;
+  height: 50px;
+}
+
+img {
+  max-height: 1000px;
   width: 100%;
-  height: 600px;
-  object-fit: cover;
-  border-radius: 10px;
-  border: 1px solid #004aad;
+  padding: 0;
+  margin: 0;
 }
 
 .icon {
-  color: #004aad;
+ color: #004aad;
   width: 80px;
   height: 80px;
+  margin-top: 30px;
 
+}
+
+.container .icon {
+  color: #FF914D;
+}
+
+.container p {
+  color: #004aad;
 }
 
 aside {
@@ -142,9 +153,9 @@ aside {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 100px 20px 40px;
-  background-color: #FF914D;
-  width: 53%;
+  padding: 0 20px 40px 0;
+  /* background-color: #FF914D;*/
+
 }
 
 .asideContent {
@@ -156,28 +167,25 @@ aside {
 }
 
 .card {
-  border: 3px solid white;
+
   border-radius: 10px;
-  background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 30%;
-  padding-top: 40px;
+  height: 400px;
+  /* background-image: url("../../public/images/palace12.jpg");
+  background-size: contain; */
+  background-color: #fff;
 
 }
 
 .btn-container {
-  margin-bottom: 40px;
+  margin-bottom: 70px;
 }
 
-.card p {
+p {
   color: #004aad;
-}
-
-.card h3 {
-  color: #004aad;
-  font-size: 30px;
 }
 
 .button {
@@ -189,10 +197,12 @@ aside {
   border-radius: 6px;
   cursor: pointer;
   text-decoration: none;
+  margin: 70px 0;
   transition: background-color 0.3s ease;
 }
 
 .button:hover {
-  background-color: #79ade4;
+  background-color: #f9d3bc;
+  color: #004aad;
 }
 </style>
