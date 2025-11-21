@@ -3,29 +3,31 @@
 
     <section>
       <div class="container">
-        <h1>Bienvenue chez Les <font-awesome-icon icon="fa-solid fa-key" class="icon" /> Clés de Maby</h1>
-
+        <h1>Les Clés de Maby <font-awesome-icon icon="fa-solid fa-bell" shake class="dot" /> – Conciergerie spécialisée
+          dans l’organisation de voyages à Marrakech</h1>
         <font-awesome-icon icon="fa-solid fa-ellipsis" class="dot" />
-
         <p>
-          La conciergerie <strong>Les Clés de Maby</strong> vous ouvre les portes de l’excellence au Maroc. <br>
-          Nous proposons des villas haut de gamme, soigneusement sélectionnées, avec des services personnalisés
-          pour un séjour inoubliable. <br><br>
-          Que ce soit pour un voyage de détente, une expérience culturelle ou une escapade de luxe, notre équipe
-          s’assure que chaque moment dépasse vos attentes.
+          Les Clés de Maby est une conciergerie dédiée à l’organisation de voyages sur mesure à Marrakech. <br><br> Nous
+          créons pour vous des séjours entièrement personnalisés, pensés selon vos envies, votre budget et votre
+          rythme.<br>
+          <br>Un hébergement soigneusement sélectionné, des activités incontournables ou confidentielles, expériences
+          uniques,
+          transferts, tables d’exception… nous orchestrons chaque détail pour que votre séjour soit fluide, confortable
+          et inoubliable. <br><br>
+
+          Que vous veniez en couple, en famille, entre amis ou pour un événement spécial, nous élaborons un programme
+          clé en main, tout en restant disponibles à chaque instant grâce à une assistance personnalisée. <br><br>Notre
+          objectif : vous permettre de profiter pleinement de Marrakech sans contraintes, avec la tranquillité d’esprit
+          d’un accompagnement professionnel et bienveillant.<br><br>
+
+          Avec <strong>Les Clés de Maby</strong>, découvrez une nouvelle manière de voyager : simple, sereine et
+          entièrement adaptée à vos besoins. <br><br>Bienvenue dans votre expérience sur-mesure à Marrakech.
         </p>
-
-        <img src="../../public/images/photo2.jpeg" alt="photo d'une villa ">
-
-
       </div>
-
-
-
     </section>
 
     <aside>
-      <h2>Les clés de Maby vous assurent un service de qualité</h2>
+      <h2>L’excellence d’un service sur mesure pour votre voyage à Marrakech</h2>
       <div class="asideContent">
 
         <div class="card logementCard">
@@ -33,14 +35,22 @@
           <font-awesome-icon icon="fa-solid fa-house-chimney" class="icon" />
 
           <h3>Hébérgement</h3>
-          <p>Propose un planning pour profiterpleinement de son séjour, activités, tourisme, etc..</p>
+          <font-awesome-icon icon="fa-solid fa-ellipsis" class="dot" />
+          <h4>Nous sélectionnons pour vous les meilleurs hébergements selon vos envies et votre budget.</h4>
+          <font-awesome-icon icon="fa-solid fa-ellipsis" class="dot" />
+          <p>Riads authentiques, villas privées, hôtels de charme ou établissements haut de gamme : nous trouvons le
+            lieu idéal pour un séjour confortable et adapté à votre style.</p>
         </div>
 
         <div class="card assistanceCard">
           <!-- icon assistance-->
           <font-awesome-icon icon="fa-solid fa-handshake-angle" class="icon" />
           <h3>Assistance</h3>
-          <p>Propose un planning pour profiterpleinement de son séjour, activités, tourisme, etc..</p>
+          <font-awesome-icon icon="fa-solid fa-ellipsis" class="dot" />
+          <h4>Profitez d’un accompagnement personnalisé tout au long de votre séjour.</h4>
+          <font-awesome-icon icon="fa-solid fa-ellipsis" class="dot" />
+          <p>Nous restons disponibles avant, pendant et après votre voyage pour répondre à vos besoins, ajuster votre
+            programme ou gérer vos demandes en temps réel. Votre tranquillité est notre priorité.</p>
         </div>
 
         <div class="card activitesCard">
@@ -48,12 +58,17 @@
 
           <font-awesome-icon icon="fa-solid fa-map-location" class="icon" />
           <h3>Activités</h3>
-          <p>Propose un planning pour profiterpleinement de son séjour, activités, tourisme, etc..</p>
+          <font-awesome-icon icon="fa-solid fa-ellipsis" class="dot" />
+          <h4>Découvrez Marrakech à travers des activités soigneusement choisies pour vous.</h4>
+          <font-awesome-icon icon="fa-solid fa-ellipsis" class="dot" />
+          <p>Excursions, expériences culinaires, bien-être, aventures ou découvertes culturelles… Nous créons un
+            programme sur mesure pour rendre votre voyage unique et mémorable.</p>
         </div>
 
       </div>
 
-      <RouterLink to="/contact" class="button">CLIQUEZ ICI POUR OBTENIR UN DEVIS</RouterLink>
+      <RouterLink :to="{ hash: '#Contact' }" class="button">CONTACTEZ-NOUS POUR OBTENIR UN DEVIS
+      </RouterLink>
     </aside>
 
     <Hebergements />
@@ -79,7 +94,7 @@ import Contact from './Contact.vue'
   justify-content: center;
   /* padding: 100px 20px 40px; */
   background-color: rgb(158, 194, 240, 0.2);
-
+  background-image: url(../../public/images/palace12.jpg);
 
 }
 
@@ -88,9 +103,11 @@ import Contact from './Contact.vue'
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 0 50px 0;
-  margin-bottom: 70px;
-  /* border: 2px solid #FF914D; */
+  border-top: 2px solid rgb(158, 194, 240, 0.2);
+  background-color: #fff;
+  margin: 110px 0;
+  width: 60%;
+  align-content: center;
 }
 
 .container p {
@@ -105,24 +122,36 @@ import Contact from './Contact.vue'
 h1 {
   color: #004aad;
   text-align: right;
-  width: 55%;
+  width: 70%;
+  margin-bottom: 45px;
+  margin-top: 30px;
 }
 
 h2 {
 
-  margin-bottom: 95px;
-  width: 40%;
+  margin-bottom: 55px;
+  width: 50%;
 }
 
 h3 {
- color: #004aad;
-  font-size: 30px;
+  color: #004aad;
+  font-size: 24px;
+}
+
+h4 {
+  color: #004aad;
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+  font-weight: bold;
+  width: 60%;
+  font-size: 23px;
 }
 
 .dot {
   color: #FF914D;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
 }
 
 img {
@@ -133,9 +162,9 @@ img {
 }
 
 .icon {
- color: #004aad;
-  width: 80px;
-  height: 80px;
+  color: #004aad;
+  width: 50px;
+  height: 50px;
   margin-top: 30px;
 
 }
@@ -148,13 +177,19 @@ img {
   color: #004aad;
 }
 
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 aside {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 20px 40px 0;
-  /* background-color: #FF914D;*/
+  background-color: #FF914D;
 
 }
 
@@ -163,21 +198,20 @@ aside {
   align-items: center;
   justify-content: space-around;
   margin-bottom: 70px;
-
+  width: 80%;
 }
 
 .card {
-
-  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 30%;
-  height: 400px;
+  height: auto;
   /* background-image: url("../../public/images/palace12.jpg");
   background-size: contain; */
   background-color: #fff;
-
+  overflow: hidden;
+  padding: 15px 10px 25px 10px;
 }
 
 .btn-container {
@@ -186,6 +220,12 @@ aside {
 
 p {
   color: #004aad;
+
+}
+
+.card p {
+  font-size: 22px;
+
 }
 
 .button {

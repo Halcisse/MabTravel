@@ -1,61 +1,75 @@
 <template>
   <section class="servicesContent" id="Services">
+    <h1>Des services sur mesure pour une expérience inoubliable à Marrakech</h1>
+
+    <font-awesome-icon icon="fa-solid fa-ellipsis" class="dot" />
     <div class="container">
-      <h1>De nombreux services pour une expérience unique </h1>
-      <p class="servicesP">Nous vous proposons une large gamme de logements à louer, notre priorité étant la sécurité.
+
+      <p class="servicesP">Nous vous proposons une gamme complète de services conçus pour simplifier votre séjour et
+        sublimer votre expérience à Marrakech. <br><br>
+        De l’hébergement sécurisé aux activités personnalisées, en passant par un accompagnement 24h/24, notre objectif
+        est de vous offrir un voyage clé en main, fluide et totalement adapté à vos envies.
         <br><br>
-        Solutions de séjour clé en main, avec lieu d'hébergement + planning d'activité excursions bien être + assistance
-        24/7j <br>
-        Selon vos besoins, nous pouvons vous proposer des AirBnb certifié de qualité, sécurisé et tout équipé, avec ou
-        sans piscine ou des villa somptueuse comme la Villa The Palace.
+        Selon vos besoins, nous sélectionnons pour vous des logements certifiés et équipés, allant des Airbnb de qualité
+        aux villas de prestige comme The Palace. <br> <br>
+        Nous élaborons ensuite votre planning d’activités : excursions, découvertes locales, expériences bien-être,
+        restaurants, sorties culturelles… Tout est pensé pour que vous profitiez pleinement de votre séjour, sans aucune
+        contrainte. <br><br>
       </p>
       <div class="servicesCard">
 
         <div class="card excursionsCard">
-          <!-- icon excursions-->
           <font-awesome-icon icon="fa-solid fa-mountain-sun" class="icon" />
-          <h3>Les excursions</h3>
+          <h3>Excursions authentiques et expériences inoubliables</h3>
           <font-awesome-icon icon="fa-solid fa-ellipsis" class="dot" />
-          <p>Propose un planning pour <br> profiterpleinement de son séjour, activités, tourisme, etc..</p>
-          <div class="imgCard">
+
+          <p>Explorez Marrakech et ses environs à travers des excursions soigneusement sélectionnées : désert d’Agafay,
+            vallée de l’Ourika, balades en quad, visites guidées… Nous organisons chaque sortie selon vos envies pour
+            vous offrir des moments mémorables.</p>
+          <!-- <div class="imgCard">
 
             <img src="../../public/images/palace9.jpg" alt="image palace 9" class="img">
             <img src="../../public/images/palace10.jpg" alt="image palace 10" class="img">
-          </div>
+          </div> -->
 
         </div>
 
         <div class="card restaurantsCard">
           <!-- icon restaurants-->
           <font-awesome-icon icon="fa-solid fa-utensils" class="icon" />
-          <h3>Les Restaurants & Marchés</h3>
+          <h3>Découvertes culinaires et immersion dans les marchés locaux</h3>
           <font-awesome-icon icon="fa-solid fa-ellipsis" class="dot" />
-          <p>Propose un planning pour profiter <br> pleinement de son séjour, activités, tourisme, etc..</p>
+          <p>Savourez le meilleur de la gastronomie marocaine grâce à nos recommandations personnalisées : restaurants
+            raffinés, adresses secrètes, rooftops, souks et marchés authentiques. Nous vous guidons vers les lieux les
+            plus adaptés à votre style et à vos envies.</p>
+          <!--
           <div class="imgCard">
 
             <img src="../../public/images/palace9.jpg" alt="image palace 9" class="img">
             <img src="../../public/images/palace10.jpg" alt="image palace 10" class="img">
-          </div>
+          </div> -->
         </div>
 
         <div class="card bienetreCard">
           <!-- icon bien-être-->
           <font-awesome-icon icon="fa-solid fa-hand-holding-heart" class="icon" />
-          <h3>Les activités Bien-être</h3>
+          <h3>Moments bien-être : hammams, spas et relaxation</h3>
           <font-awesome-icon icon="fa-solid fa-ellipsis" class="dot" />
-          <p>Propose un planning pour profiter <br> pleinement de son séjour, activités, tourisme, etc..</p>
-          <div class="imgCard">
+          <p>Offrez-vous une parenthèse de détente avec nos expériences bien-être : hammam traditionnel, soins du corps,
+            massages, spas haut de gamme… Nous vous réservons des espaces de qualité pour une pause apaisante pendant
+            votre séjour.</p>
+          <!-- <div class="imgCard">
 
             <img src="../../public/images/palace9.jpg" alt="image palace 9" class="img">
             <img src="../../public/images/palace10.jpg" alt="image palace 10" class="img">
-          </div>
+          </div> -->
         </div>
 
       </div>
     </div>
 
 
-    <RouterLink to="/contact" class="button">Nous contacter</RouterLink>
+    <RouterLink :to="{ hash: '#Contact' }" class="button">Nous contacter</RouterLink>
 
   </section>
 </template>
@@ -72,7 +86,7 @@
   align-items: center;
   justify-content: center;
   padding: 100px 20px 40px;
-  background-color: #fff;
+  background-color: #fff
 }
 
 .container {
@@ -80,19 +94,29 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #FF914D;
-  border: 6px solid #FF914D;
-  width: 75%;
+  background-color: #fff;
+  /* width: 75%; */
   margin-bottom: 40px;
+  margin-top: 35px;
+  background-color: rgb(158, 194, 240, 0.2);
 }
 
 h1 {
-  width: 90%;
+  width: 60%;
   color: #004aad;
+  margin-bottom: 15px;
+}
+
+.doth1 {
+  color: #FF914D;
+  width: 50px;
+  height: 50px;
+
 }
 
 h3 {
   font-size: 44px;
+  text-align: center;
 
 }
 
@@ -106,14 +130,15 @@ h3 {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 60px 0;
   width: 75%;
 }
 
 .servicesP {
-  color: #fff;
+  text-align: left;
 }
-
+.restaurantsCard p {
+  padding: 0 15px;
+}
 .card {
   display: flex;
   flex-direction: column;
@@ -121,9 +146,8 @@ h3 {
   justify-content: center;
   border-radius: 10px;
   width: 100%;
-  padding-top: 40px;
+  padding: 60px 0;
   margin-bottom: 50px;
-  border: 9px double #FF914D;
   background-color: #fff;
 
 }
@@ -137,14 +161,15 @@ h3 {
 
 .dot {
   color: #FF914D;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
 }
 
 .imgCard {
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 .img {
@@ -154,7 +179,6 @@ h3 {
   border: 1px solid #fff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   margin-bottom: 40px;
-
 }
 
 .button {

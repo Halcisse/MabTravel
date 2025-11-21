@@ -28,16 +28,22 @@
 
   <div class="hebergContent" id="Hebergements">
     <section class="container">
-      <h1>Des hébergements de luxe et sécurisés</h1>
-      <font-awesome-icon icon="fa-solid fa-ellipsis" class="doth1" />
-      <p class="containerP">Nous vous proposons une large gamme de logements à louer, notre priorité étant la sécurité.
+      <h1>Des hébergements de luxe, fiables et entièrement sécurisés</h1>
+      <font-awesome-icon icon="fa-solid fa-ellipsis" class="dot" />
+      <p class="containerP">Nous vous proposons une sélection d’hébergements haut de gamme, choisis avec soin pour leur
+        sécurité, leur confort et la qualité de leurs prestations. <br> <br>
+        Selon vos besoins, nous vous orientons vers des logements certifiés de confiance : riads élégants, Airbnb
+        entièrement équipés, villas modernes ou résidences d’exception comme la somptueuse Villa The Palace. <br> <br>
+        Tous nos hébergements disposent du wifi, d’installations complètes et, selon vos envies, d’une piscine privée,
+        d’un espace extérieur ou d’équipements premium. <br> <br>
+
+        Pour vous inspirer, découvrez ci-dessous trois de nos villas les plus demandées. <br>
+        Elles ne représentent qu’un aperçu de nos possibilités : chaque séjour étant unique, nous vous proposons
+        toujours un logement sur mesure, parfaitement adapté à votre profil et à vos exigences, tout en garantissant un
+        niveau de sécurité irréprochable.
         <br><br>
-        Selon vos besoins, nous pouvons vous proposer des AirBnb certifié de qualité, sécurisé et tout équipé, avec ou
-        sans piscine ou des villa somptueuse comme la Villa The Palace. <br>
-        Les logements sont tous équipés du wifi, et avec toutes les installations nécéssaires. <br><br>
-        Voici quelques photos de nos principaux partenaires, pour vous inspirer. <br>
-        Vous pourrez ensuite remplir le formulaire afin de connaitre vos besoins précis, nous pourrons ainsi vous
-        proposer le logement idéal.
+        Vous pourrez ensuite remplir notre formulaire afin de préciser vos attentes. Nous pourrons ainsi vous présenter
+        l’hébergement idéal pour votre séjour à Marrakech.
 
       </p>
 
@@ -47,9 +53,11 @@
           <h2>The Palace</h2>
           <font-awesome-icon icon="fa-solid fa-ellipsis" class="dot" />
           <p class="cardP">
-            Bienvenue à <strong>Villa Bonsai</strong>, un havre de paix et de sérénité niché au cœur du Maroc.
-            Cette villa allie design épuré et nature luxuriante, idéale pour les amateurs de calme et de bien-être.
-            Profitez d’un jardin zen, d’une piscine privée et d’un service sur mesure pour un séjour inoubliable.
+            Bienvenue à<strong> Villa The Palace </strong>, une adresse d’exception où élégance et confort se
+            rencontrent au cœur de
+            Marrakech. Cette villa somptueuse offre des espaces vastes, une décoration raffinée et des prestations haut
+            de gamme pour un séjour inoubliable. Profitez d’une piscine majestueuse, de grands espaces extérieurs et
+            d’un service premium pensé pour répondre à toutes vos envies.
           </p>
           <Carousel :items-to-show="1" :wrap-around="true" :autoplay="4000" class="carousel">
             <Slide v-for="(img, index) in imagesP" :key="index">
@@ -59,10 +67,10 @@
 
         </div>
         <div class="bonsaiCard card">
-          <h2>La Villa Bonsai</h2>
+          <h2>La Villa Bonsaï</h2>
           <font-awesome-icon icon="fa-solid fa-ellipsis" class="dot" />
           <p>
-            Bienvenue à <strong>Villa Bonsai</strong>, un havre de paix et de sérénité niché au cœur du Maroc.
+            Bienvenue à <strong>Villa Bonsaï</strong>, un havre de paix et de sérénité niché au cœur du Maroc.
             Cette villa allie design épuré et nature luxuriante, idéale pour les amateurs de calme et de bien-être.
             Profitez d’un jardin zen, d’une piscine privée et d’un service sur mesure pour un séjour inoubliable.
           </p>
@@ -77,9 +85,11 @@
           <h2>La Villa Targa</h2>
           <font-awesome-icon icon="fa-solid fa-ellipsis" class="dot" />
           <p>
-            Bienvenue à <strong>Villa Bonsai</strong>, un havre de paix et de sérénité niché au cœur du Maroc.
-            Cette villa allie design épuré et nature luxuriante, idéale pour les amateurs de calme et de bien-être.
-            Profitez d’un jardin zen, d’une piscine privée et d’un service sur mesure pour un séjour inoubliable.
+            Bienvenue à <strong>Villa Targa,</strong> un véritable refuge moderne alliant style contemporain et
+            atmosphère chaleureuse.
+            Idéale pour les familles comme pour les groupes d’amis, cette villa offre des espaces lumineux, une piscine
+            privée et un cadre reposant. Avec ses équipements complets et son service personnalisé, Villa Taga est le
+            lieu parfait pour vivre une expérience authentique et sereine à Marrakech.
           </p>
           <Carousel :items-to-show="1" :wrap-around="true" :autoplay="4000" class="carousel">
             <Slide v-for="(img, index) in imagesT" :key="index">
@@ -92,7 +102,7 @@
 
     </section>
 
-    <RouterLink to="/contact" class="button">Cliquez pour remplir le formulaire!</RouterLink>
+    <RouterLink :to="{ hash: '#Contact' }" class="button">Cliquez pour obtenir un devis ! </RouterLink>
   </div>
 </template>
 
@@ -107,6 +117,17 @@ const imagesP = ref([
   { src: './images/palace2.jpg', alt: 'Villa p2' },
   { src: './images/palace3.jpg', alt: 'Villa p3' },
   { src: './images/palace4.jpg', alt: 'Villa p4' },
+  { src: './images/palace5.jpg', alt: 'Villa p5' },
+  { src: './images/palace6.jpg', alt: 'Villa p6' },
+  { src: './images/palace7.jpg', alt: 'Villa p7' },
+  { src: './images/palace8.jpg', alt: 'Villa p8' },
+  { src: './images/palace9.jpg', alt: 'Villa p9' },
+  { src: './images/palace10.jpg', alt: 'Villa p10' },
+  { src: './images/palace11.jpg', alt: 'Villa p11' },
+  { src: './images/palace12.jpg', alt: 'Villa p12' },
+  { src: './images/palace13.jpg', alt: 'Villa p13' },
+  { src: './images/palace14.jpg', alt: 'Villa p14' },
+  { src: './images/palace15.jpg', alt: 'Villa p15' },
 ])
 
 const imagesB = ref([
@@ -114,13 +135,31 @@ const imagesB = ref([
   { src: './images/bonsai2.jpg', alt: 'Villa b2' },
   { src: './images/bonsai3.jpg', alt: 'Villa b3' },
   { src: './images/bonsai4.jpg', alt: 'Villa b4' },
+  { src: './images/bonsai5.jpg', alt: 'Villa b5' },
+  { src: './images/bonsai6.jpg', alt: 'Villa b6' },
+  { src: './images/bonsai7.jpg', alt: 'Villa b7' },
+  { src: './images/bonsai8.jpg', alt: 'Villa b8' },
+  { src: './images/bonsai9.jpg', alt: 'Villa b9' },
+  { src: './images/bonsai10.jpg', alt: 'Villa b10' },
+  { src: './images/bonsai11.jpg', alt: 'Villa b11' },
+  { src: './images/bonsai12.jpg', alt: 'Villa b12' },
+  { src: './images/bonsai13.jpg', alt: 'Villa b13' },
+  { src: './images/bonsai14.jpg', alt: 'Villa b14' },
 ])
 
 const imagesT = ref([
-  { src: './images/photo1.jpeg', alt: 'Villa p1' },
-  { src: './images/photo2.jpeg', alt: 'Villa p2' },
-  { src: './images/photo3.jpeg', alt: 'Villa p3' },
-  { src: './images/photo4.jpeg', alt: 'Villa p4' },
+  { src: './images/targa1.jpg', alt: 'Villa t1' },
+  { src: './images/targa2.jpg', alt: 'Villa t2' },
+  { src: './images/targa3.jpg', alt: 'Villa t3' },
+  { src: './images/targa4.jpg', alt: 'Villa t4' },
+  { src: './images/targa5.jpg', alt: 'Villa t5' },
+  { src: './images/targa6.jpg', alt: 'Villa t6' },
+  { src: './images/targa8.jpg', alt: 'Villa t8' },
+  { src: './images/targa9.jpg', alt: 'Villa t9' },
+  { src: './images/targa10.jpg', alt: 'Villa t10' },
+  { src: './images/targa11.jpg', alt: 'Villa t11' },
+  { src: './images/targa12.jpg', alt: 'Villa t12' },
+
 ])
 
 </script>
@@ -151,8 +190,9 @@ h1 {
 
 }
 
-h2 {
-  color: #fff;
+
+.containerP {
+  text-align: left;
 }
 
 .carousel {
@@ -164,8 +204,6 @@ h2 {
   width: 75%;
   height: 400px;
   object-fit: cover;
-  border-radius: 10px;
-  border: 1px solid #004aad;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -175,16 +213,14 @@ h2 {
   align-items: center;
   justify-content: center;
   background-color: #fff;
-  padding: 10px 0 30px 0;
-  border-radius: 10px;
   margin-bottom: 50px;
-  border-bottom: 8px solid #fff;
-  background-color: #004aad;
+  background-color: rgb(158, 194, 240, 0.2);
+  /* background-color: #004aad; */
 
 }
 
 
-.containerP {
+p {
   color: #004aad;
 }
 

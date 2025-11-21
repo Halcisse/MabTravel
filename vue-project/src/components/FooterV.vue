@@ -3,7 +3,7 @@
   <footer class="footer">
     <div class="footer-content">
       <div class="contact">
-        <img src="../../public/images/logomabymini2.png" alt="Logo les clés de Maby" class="logo">
+        <img src="../../public/images/logomabymini2.png" alt="Logo les clés de Maby" class="logoFooter">
         <p>📍 Marrakech, Maroc</p>
         <p>📞 +212 6 12 34 56 78</p>
         <p>📧 contact@clesdemaby.com</p>
@@ -32,20 +32,21 @@
   flex-direction: column;
   background-color: #fff;
   padding: 40px 20px 20px;
-  font-size: 1.5rem;
+  font-size: 1rem;
+
 }
 
 .footer-content {
   width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
-
+  justify-content: space-between;
   margin: 0 auto;
 }
 
 .contact p {
   margin: 4px 0;
+  font-size: 18px;
   color: #004aad;
 }
 
@@ -56,16 +57,15 @@
 
 .footer-bottom {
   text-align: center;
-  font-size: 0.85rem;
   margin-top: 20px;
-  border-top: 2px solid white;
+  border-top: 2px solid #ff914d;
   padding-top: 10px;
   color: #ff914d;
 }
 
 .logoFooter {
-  width: 360px;
-  height: 180px;
+  width: 350px;
+  height: 150px;
 }
 
 /* Responsive */
